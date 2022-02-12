@@ -1,0 +1,81 @@
+.desktop{
+    display: none;
+    text-align: center;
+}
+.tablet{
+    display: none;
+    text-align: center;
+}
+.mobile{
+    display: none;
+    text-align: center;
+}
+.chicken{
+    background-color: grey;
+    border: solid 2px black;
+    margin: 1em;
+}
+.chicken h1{
+    background-color: darksalmon;
+    border: solid 2px black;
+    width: 5rem;
+    padding: 10px 50px;
+    border-left: none;
+    border-top: none;
+    margin: 0;
+}
+.beef{
+    background-color: grey;
+    border: solid 2px black;
+    margin: 1em;
+}
+.beef h1{
+    background-color: brown;
+    border: solid 2px black;
+    color: white;
+    width: 5rem;
+    padding: 10px 50px;
+    border-left: none;
+    border-top: none;
+    margin: 0;
+}
+.sushi{
+    background-color: grey;
+    border: solid 2px black;
+    margin: 1em;
+}
+.sushi h1{
+    background-color: burlywood;
+    border: solid 2px black;
+    width: 5rem;
+    padding: 10px 50px;
+    border-left: none;
+    border-top: none;
+    margin: 0;
+}
+
+@media (max-width:767px){
+    .mobile{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .tablet{
+        display: grid;
+    }
+    .tablet section{
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+    }
+    .tablet section:last-child{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media (min-width:992px){
+    .desktop{
+        display: flex;
+        flex-direction: row;
+    }
+}
